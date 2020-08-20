@@ -1,0 +1,118 @@
+html {
+    scroll-behavior: smooth;
+}
+
+input[type="color"]{
+    height: 300px;
+    width: 300px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+#primary_color::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+#primary_color::-webkit-color-swatch {
+    border: none;
+   
+}
+
+.color-box{
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+    border: 1px solid #333;
+}
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #3643b3;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
+.container-spy{
+    position: relative;
+}
+.arrow-spy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.guage-d {
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    overflow: hidden;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+
+.gauge-a {
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .2);
+    width: 400px;
+    height: 200px;
+    top: 0%;
+    border-radius: 250px 250px 0px 0px;
+}
+
+.gauge-b {
+    z-index: 3;
+    position: absolute;
+    background-color:#52cd9e;
+    width: 250px;
+    height: 125px;
+    top: 75px;
+    margin-left: 75px;
+    margin-right: auto;
+    border-radius: 250px 250px 0px 0px;
+}
+
+.gauge-c {
+    z-index: 2;
+    position: absolute;
+    background-color: #5664F9;
+    width: 400px;
+    height: 200px;
+    top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px 0px 200px 200px;
+    transform-origin: center top;
+    transition: all 1.3s ease-in-out;
+}
+
+.container:hover .gauge-c {
+    transform: rotate(.5turn);
+}
+
+.container:hover .gauge-data {
+    color: rgba(255, 255, 255, 1);
+}
+
+.gauge-data {
+    z-index: 4;
+    color: rgba(255, 255, 255, .2);
+    font-size: 1.5em;
+    line-height: 25px;
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 1s ease-out;
+}

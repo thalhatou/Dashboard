@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Dashboard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	<link rel="shortcut icon" href="https://img.icons8.com/fluent/48/000000/dashboard.png" type="image/x-icon">
+	<!--font awosome cdn-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+	<!---canva js-->
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/dark-mode.css">
+	<link rel="stylesheet" href="css/odometer.css">
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<!--canvasjs link-->
+
+</head>
+
+<body data-spy="scroll" data-target="#sidebar" data-offset="50">
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="custom-menu">
+				<button type="button" id="sidebarCollapse" class="btn btn-primary">
+					<i class="fa fa-bars"></i>
+					<span class="sr-only">Toggle Menu</span>
+				</button>
+			</div>
+			<div class="p-4">
+				<h1><a href="index.html" class="logo">Operations</span><span></a></h1>
+				<ul class="list-unstyled components mb-5">
+					<li class="active">
+						<a href="index.html"><img src="https://img.icons8.com/color/48/000000/sorting-options.png" /
+								class="mr-3">Dashboard</a>
+					</li>
+					<li>
+						<a href="#map-section"><img src="https://img.icons8.com/color/48/000000/apple-map.png"
+								class="mr-2" />Map</a>
+					</li>
+					<li>
+						<a href="#telemetry-section"><img
+								src="https://img.icons8.com/color/48/000000/industrial-scales-connecting.png" />Telemetry</a>
+					</li>
+					<li>
+						<a href="#"><img src="https://img.icons8.com/color/48/000000/traffic-light.png"
+								class="mr-2" />Traffic</a>
+					</li>
+					<li>
+						<a href="#"><img src="https://img.icons8.com/color/48/000000/normal-distribution-histogram.png"
+								class="mr-2" />Distribution</a>
+					</li>
+					<li>
+						<a href="#"><img src="https://img.icons8.com/color/48/000000/broadcasting.png" /
+								class="mr-2">V-Net</a>
+					</li>
+					<li>
+						<a href="#"><img src="https://img.icons8.com/color/48/000000/safety-collection-place.png"
+								class="mr-2" />Social</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle user-action"><img
+								src="https://img.icons8.com/color/48/000000/connected-people.png"
+								class="mr-2" />Entertainment</a>
+						<ul class="dropdown-menu p-2" style="background-color:#3643b3;">
+							<li><a href="#"><img src="https://img.icons8.com/color/48/000000/wifi-router.png" /
+										class="mr-2">Wifi Share</a></li>
+							<li><a href="#"><img src="https://img.icons8.com/color/48/000000/reality-stars.png" /
+										class="mr-2">TV</a></li>
+							<li><a href="#"><img src="https://img.icons8.com/nolan/64/youtube-music.png" /
+										class="mr-2"></i>Vtube</a></li>
+							<li class="divider"></li>
+
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Page Content starts here  -->
+		<div id="content" class="p-1 p-md-3 pt-5">
+			<!--switch button section-->
+			<div class="custom-control custom-switch text-left" style="float: right;margin: 10px;">
+				<input type="checkbox" class="custom-control-input" id="darkSwitch" />
+				<label class="custom-control-label" for="darkSwitch">Dark Mode 😀</label>
+			</div>
+			<!--map section-->
+			<div class="container-fluid shadow" id="map-section">
+				<iframe src="https://www.atlistmaps.com/map/cf6fbf48-a08e-4504-8559-c7d5322fd871?share=true"
+					allow="geolocation" width="100%" height="700px" frameborder="0" scrolling="no"></iframe>
+			</div>
+			<!--ends of map section-->
+
+
+			<!--Telemetry section-->
+			<div class="container-spy">
+				<a class="arrow-spy" href="#telemetry-section"> <i class="fa fa-arrow-down shadow p-2"
+						style="font-size:25px;"></i></a>
+			</div>
+			<div class="container-fluid shadow" id="telemetry-section">
+				<h2 class="text-center text-light">Smart Controls</h2>
+				<div class="row" style="margin-top: 10px;">
+					<div class="col-md-4 bg-dark p-2 text-center">
+						<canvas class="text-dark" data-type="radial-gauge" data-width="400" data-height="400"
+							data-units="Km/h" data-title="false" data-value="33.77" data-animate-on-init="true"
+							data-animated-value="true" data-min-value="0" data-max-value="220"
+							data-major-ticks="0,20,40,60,80,100,120,140,160,180,200,220" data-minor-ticks="2"
+							data-stroke-ticks="false" data-highlights='[
+            { "from": 0, "to": 50, "color": "rgba(0,255,0,.15)" },
+            { "from": 50, "to": 100, "color": "rgba(255,255,0,.15)" },
+            { "from": 100, "to": 150, "color": "rgba(255,30,0,.25)" },
+            { "from": 150, "to": 200, "color": "rgba(255,0,225,.25)" },
+            { "from": 200, "to": 220, "color": "rgba(0,0,255,.25)" }
+        ]' data-color-plate="transparent" data-color-major-ticks="#f5f5f5" data-color-minor-ticks="#ddd"
+							data-color-title="#fff" data-color-units="#ccc" data-color-numbers="#eee"
+							data-color-needle-start="rgba(240, 128, 128, 1)"
+							data-color-needle-end="rgba(255, 160, 122, .9)" data-value-box="true"
+							data-animation-rule="bounce" data-animation-duration="500" data-border-outer-width="3"
+							data-border-middle-width="3" data-border-inner-width="3"></canvas>
+
+					</div>
+					<div class="col-md-4">
+						<div id="chartContainer" style="height: 400px; width: 100%;" class="bg-light"></div>
+					</div>
+					<div class="col-md-4 bg-dark">
+						<table class="table table-bordered bg-light"
+							style="height: 400px; width: 100%; margin-top:10px; margin-right: 5px;">
+							<thead>
+								<tr>
+									<th scope="col"><img src="https://img.icons8.com/dusk/64/000000/dome-camera.png"
+											class="mr-3" />CAMERAS
+									</th>
+								</tr>
+							</thead>
+							<thead>
+								<tr>
+									<th scope="col"><img src="https://img.icons8.com/color/48/000000/signpost.png"
+											class="mr-3" />Front View</th>
+									<th scope="col"><img src="https://img.icons8.com/color/48/000000/where-to-quest.png"
+											class="mr-3" />Back View
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td><img src="https://img.icons8.com/color/48/000000/country.png" class="mr-3" />Cam
+										F</td>
+									<td><img src="https://img.icons8.com/color/48/000000/australia-country.png"
+											class="mr-3" />Cam B
+									</td>
+								<tr>
+									<td><img src="https://img.icons8.com/cute-clipart/48/000000/country.png"
+											class="mr-3" />Cam L</td>
+									<td><img src="https://img.icons8.com/doodle/48/000000/country.png"
+											class="mr-3" />Cam R</td>
+								</tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-4">
+                          <canvas data-type="radial-gauge"
+                          	data-major-ticks="950, 960, 970, 980, 990, 1000, 1010, 1020, 1030, 1040, 1050"
+                          	data-type="radial-gauge" data-title="speedometer" data-units="mBar" data-width="200"
+                          	data-height="200" data-value-int="0" data-value-dec="0" data-width="200" data-height="200"
+                          	data-min-value="950" data-max-value="1050" data-highlights="false"
+                          	data-color-stroke-ticks="#f00"></canvas>
+						</div>
+						<div class="col-md-4">
+						</div>
+						<div class="col-md-4">
+							<input type="color" id="primary_color" class="field-radio">
+							<span class="color-box" id="color_val"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--my js scripts link-->
+		<script src="js/gauge.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/dark-mode-switch.js"></script>
+		<script src="js/dark-mode-switch.min.js"></script>
+		<script src="js/js.js"></script>
+		<script src="js/jquery.transit.min.js"></script>
+		<script>
+			split(['#map-section', '#telemetry-section'])
+		</script>
+		<script>
+			var scroll = new SmoothScroll('a[href*="#"]', {
+				speed: 600
+			});
+		</script>
+		<a class="gotopbtn" href="#"> <i class="fa fa-arrow-up"></i> </a>
+</body>
+
+</html>
